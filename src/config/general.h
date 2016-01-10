@@ -37,23 +37,23 @@ FILE_LICENCE ( GPL2_OR_LATER_OR_UBDL );
 #define	NET_PROTO_IPV4		/* IPv4 protocol */
 #undef	NET_PROTO_IPV6		/* IPv6 protocol */
 #undef	NET_PROTO_FCOE		/* Fibre Channel over Ethernet protocol */
-#define	NET_PROTO_STP		/* Spanning Tree protocol */
+#undef	NET_PROTO_STP		/* Spanning Tree protocol */
 
 /*
  * PXE support
  *
  */
-//#undef	PXE_STACK		/* PXE stack in iPXE - you want this! */
-//#undef	PXE_MENU		/* PXE menu booting */
+#undef	PXE_STACK		/* PXE stack in iPXE - you want this! */
+#undef	PXE_MENU		/* PXE menu booting */
 
 /*
  * Download protocols
  *
  */
 
-#define	DOWNLOAD_PROTO_TFTP	/* Trivial File Transfer Protocol */
+#undef	DOWNLOAD_PROTO_TFTP	/* Trivial File Transfer Protocol */
 #define	DOWNLOAD_PROTO_HTTP	/* Hypertext Transfer Protocol */
-#undef	DOWNLOAD_PROTO_HTTPS	/* Secure Hypertext Transfer Protocol */
+#define	DOWNLOAD_PROTO_HTTPS	/* Secure Hypertext Transfer Protocol */
 #undef	DOWNLOAD_PROTO_FTP	/* File Transfer Protocol */
 #undef	DOWNLOAD_PROTO_SLAM	/* Scalable Local Area Multicast */
 #undef	DOWNLOAD_PROTO_NFS	/* Network File System Protocol */
@@ -63,27 +63,27 @@ FILE_LICENCE ( GPL2_OR_LATER_OR_UBDL );
  *
  */
 
-//#undef	SANBOOT_PROTO_ISCSI	/* iSCSI protocol */
-//#undef	SANBOOT_PROTO_AOE	/* AoE protocol */
-//#undef	SANBOOT_PROTO_IB_SRP	/* Infiniband SCSI RDMA protocol */
-//#undef	SANBOOT_PROTO_FCP	/* Fibre Channel protocol */
-//#undef	SANBOOT_PROTO_HTTP	/* HTTP SAN protocol */
+#undef	SANBOOT_PROTO_ISCSI	/* iSCSI protocol */
+#undef	SANBOOT_PROTO_AOE	/* AoE protocol */
+#undef	SANBOOT_PROTO_IB_SRP	/* Infiniband SCSI RDMA protocol */
+#undef	SANBOOT_PROTO_FCP	/* Fibre Channel protocol */
+#undef	SANBOOT_PROTO_HTTP	/* HTTP SAN protocol */
 
 /*
  * HTTP extensions
  *
  */
-#define HTTP_AUTH_BASIC		/* Basic authentication */
-#define HTTP_AUTH_DIGEST	/* Digest authentication */
+#undef HTTP_AUTH_BASIC		/* Basic authentication */
+#undef HTTP_AUTH_DIGEST	/* Digest authentication */
 //#define HTTP_ENC_PEERDIST	/* PeerDist content encoding */
 
 /*
  * 802.11 cryptosystems and handshaking protocols
  *
  */
-#define	CRYPTO_80211_WEP	/* WEP encryption (deprecated and insecure!) */
-#define	CRYPTO_80211_WPA	/* WPA Personal, authenticating with passphrase */
-#define	CRYPTO_80211_WPA2	/* Add support for stronger WPA cryptography */
+#undef	CRYPTO_80211_WEP	/* WEP encryption (deprecated and insecure!) */
+#undef	CRYPTO_80211_WPA	/* WPA Personal, authenticating with passphrase */
+#undef	CRYPTO_80211_WPA2	/* Add support for stronger WPA cryptography */
 
 /*
  * Name resolution modules
@@ -115,19 +115,19 @@ FILE_LICENCE ( GPL2_OR_LATER_OR_UBDL );
  * Command-line commands to include
  *
  */
-#define	AUTOBOOT_CMD		/* Automatic booting */
-#define	NVO_CMD			/* Non-volatile option storage commands */
-#define	CONFIG_CMD		/* Option configuration console */
-#define	IFMGMT_CMD		/* Interface management commands */
-#define	IWMGMT_CMD		/* Wireless interface management commands */
-#define FCMGMT_CMD		/* Fibre Channel management commands */
-#define	ROUTE_CMD		/* Routing table management commands */
+//#define	AUTOBOOT_CMD		/* Automatic booting */
+//#define	NVO_CMD			/* Non-volatile option storage commands */
+//#define	CONFIG_CMD		/* Option configuration console */
+//#define	IFMGMT_CMD		/* Interface management commands */
+//#define	IWMGMT_CMD		/* Wireless interface management commands */
+//#define FCMGMT_CMD		/* Fibre Channel management commands */
+//#define	ROUTE_CMD		/* Routing table management commands */
 #define IMAGE_CMD		/* Image management commands */
 #define DHCP_CMD		/* DHCP management commands */
-#define SANBOOT_CMD		/* SAN boot commands */
-#define MENU_CMD		/* Menu commands */
-#define LOGIN_CMD		/* Login command */
-#define SYNC_CMD		/* Sync command */
+//#define SANBOOT_CMD		/* SAN boot commands */
+//#define MENU_CMD		/* Menu commands */
+//#define LOGIN_CMD		/* Login command */
+//#define SYNC_CMD		/* Sync command */
 //#define NSLOOKUP_CMD		/* DNS resolving command */
 //#define TIME_CMD		/* Time commands */
 //#define DIGEST_CMD		/* Image crypto digest commands */
@@ -150,7 +150,7 @@ FILE_LICENCE ( GPL2_OR_LATER_OR_UBDL );
  *
  */
 #undef	NONPNP_HOOK_INT19	/* Hook INT19 on non-PnP BIOSes */
-#define	AUTOBOOT_ROM_FILTER	/* Autoboot only devices matching our ROM */
+#undef	AUTOBOOT_ROM_FILTER	/* Autoboot only devices matching our ROM */
 
 /*
  * Error message tables to include
